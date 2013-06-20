@@ -3,9 +3,13 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
-  api.use('EJSON', ['client', 'server']);
+  api.use('ejson', ['client', 'server']);
   api.use('underscore', ['client', 'server']);
-  api.add_files('lib/posture.js', ['client', 'server']);
+
+  api.add_files([
+    'lib/posture.js',
+    'lib/controller.js'
+  ], ['client', 'server']);
 });
 
 Package.on_test(function (api) {
