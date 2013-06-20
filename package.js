@@ -8,6 +8,8 @@ Package.on_use(function (api) {
 
   api.add_files([
     'lib/posture.js',
+    'lib/module.js',
+    'lib/class.js',
     'lib/controller.js'
   ], ['client', 'server']);
 });
