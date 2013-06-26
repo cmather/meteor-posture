@@ -11,8 +11,6 @@ Package.on_use(function (api) {
     'lib/module.js',
     'lib/class.js'
   ], ['client', 'server']);
-
-  api.add_files('lib/controller.js', 'client');
 });
 
 Package.on_test(function (api) {
