@@ -11,6 +11,8 @@ Package.on_use(function (api) {
     'lib/module.js',
     'lib/class.js'
   ], ['client', 'server']);
+
+  api.export(['Class', 'Module', 'Posture'], ['client', 'server']);
 });
 
 Package.on_test(function (api) {
