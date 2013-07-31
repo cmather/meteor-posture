@@ -12,10 +12,20 @@ Package.on_use(function (api) {
     'lib/class.js'
   ], ['client', 'server']);
 
-  api.export(['Class', 'Module', 'Posture'], ['client', 'server']);
+  api.export([
+    'Class',
+    'Module'
+  ], ['client', 'server']);
+
+  api.export('Posture', {testOnly: true});
 });
 
 Package.on_test(function (api) {
-  api.use('posture');
+  api.use([
+    'posture',
+    'tinytest',
+    'test-helpers'
+  ], ['client', 'server']);
+
   api.add_files('test/posture-test.js', ['client', 'server']);
 });
